@@ -10,15 +10,35 @@ import E_Core
 
 class ViewController: UIViewController {
 
+    let numbers = [2,2,2,2]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let result = SumValues().sum(numbers: [2,2,2,2])
+        
+        view.backgroundColor = .white
 
-        print(result)
-        // Do any additional setup after loading the view.
+        let result = SumValues().sum(numbers: numbers)
+        
+        let stringNumbers = numbers.map { String($0) }
+        let message = "Sum of \(stringNumbers.joined(separator: "+")) = \(result) calculated using E_Core_sum function"
+
+        let coreUI = E_UIViewController(message: message,
+                                        buttonTitle: "Good", buttonColor: .red) { [weak self] in
+            guard let self = self else { return }
+            
+            print("Button tapped!")
+        }
+        addChild(coreUI)
+        view.addSubview(coreUI.view)
+        coreUI.view.anchor(top: view.topAnchor,
+                           leading: view.leadingAnchor,
+                           bottom: view.bottomAnchor,
+                           trailing: view.trailingAnchor)
+        coreUI.didMove(toParent: self)
+       
     }
 
 
 }
+
 

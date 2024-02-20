@@ -10,6 +10,8 @@
 		F1B7A7F22B7A35820067C093 /* E_Core.docc in Sources */ = {isa = PBXBuildFile; fileRef = F1B7A7F12B7A35820067C093 /* E_Core.docc */; };
 		F1B7A7F32B7A35820067C093 /* E_Core.h in Headers */ = {isa = PBXBuildFile; fileRef = F1B7A7F02B7A35820067C093 /* E_Core.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F1B7A8032B7A37BB0067C093 /* E_Sum.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B7A8022B7A37BB0067C093 /* E_Sum.swift */; };
+		F1F050AC2B84954F004195F4 /* E_UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F050AB2B84954F004195F4 /* E_UIViewController.swift */; };
+		F1F050C02B8498F3004195F4 /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F050BF2B8498F3004195F4 /* UIView+Constraints.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -17,6 +19,8 @@
 		F1B7A7F02B7A35820067C093 /* E_Core.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = E_Core.h; sourceTree = "<group>"; };
 		F1B7A7F12B7A35820067C093 /* E_Core.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = E_Core.docc; sourceTree = "<group>"; };
 		F1B7A8022B7A37BB0067C093 /* E_Sum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = E_Sum.swift; sourceTree = "<group>"; };
+		F1F050AB2B84954F004195F4 /* E_UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = E_UIViewController.swift; sourceTree = "<group>"; };
+		F1F050BF2B8498F3004195F4 /* UIView+Constraints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +54,8 @@
 			isa = PBXGroup;
 			children = (
 				F1B7A8022B7A37BB0067C093 /* E_Sum.swift */,
+				F1F050BF2B8498F3004195F4 /* UIView+Constraints.swift */,
+				F1F050AB2B84954F004195F4 /* E_UIViewController.swift */,
 				F1B7A7F02B7A35820067C093 /* E_Core.h */,
 				F1B7A7F12B7A35820067C093 /* E_Core.docc */,
 			);
@@ -137,6 +143,8 @@
 			files = (
 				F1B7A7F22B7A35820067C093 /* E_Core.docc in Sources */,
 				F1B7A8032B7A37BB0067C093 /* E_Sum.swift in Sources */,
+				F1F050C02B8498F3004195F4 /* UIView+Constraints.swift in Sources */,
+				F1F050AC2B84954F004195F4 /* E_UIViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
