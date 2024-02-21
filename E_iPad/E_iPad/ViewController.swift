@@ -25,6 +25,16 @@ class ViewController: UIViewController {
                              buttonTitle: "V.Good", buttonColor: .green){ [weak self] in
              guard let self = self else { return }
              
+             print("Button tapped!")
+             let splitViewController = UISplitViewController()
+             splitViewController.preferredDisplayMode = .automatic
+             splitViewController.viewControllers = [
+                 UINavigationController(rootViewController: PDFListViewController())
+             ]
+             
+             UIApplication.shared.windows.first?.rootViewController = splitViewController
+
+             
          }
          addChild(coreUI)
          view.addSubview(coreUI.view)

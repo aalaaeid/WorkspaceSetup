@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D30EA922B85F46A00E16843 /* QRAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D30EA912B85F46A00E16843 /* QRAlertView.swift */; };
+		2D30EA942B85F91200E16843 /* BottomMenuPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D30EA932B85F91200E16843 /* BottomMenuPresentationController.swift */; };
 		F1B7A7782B7A33040067C093 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B7A7772B7A33040067C093 /* AppDelegate.swift */; };
 		F1B7A77A2B7A33040067C093 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B7A7792B7A33040067C093 /* SceneDelegate.swift */; };
 		F1B7A77C2B7A33040067C093 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B7A77B2B7A33040067C093 /* ViewController.swift */; };
@@ -52,6 +54,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2D30EA912B85F46A00E16843 /* QRAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRAlertView.swift; sourceTree = "<group>"; };
+		2D30EA932B85F91200E16843 /* BottomMenuPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomMenuPresentationController.swift; sourceTree = "<group>"; };
 		F1B7A7742B7A33040067C093 /* E_iPhone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = E_iPhone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1B7A7772B7A33040067C093 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F1B7A7792B7A33040067C093 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -121,6 +125,8 @@
 				F1B7A7772B7A33040067C093 /* AppDelegate.swift */,
 				F1B7A7792B7A33040067C093 /* SceneDelegate.swift */,
 				F1F050C32B849911004195F4 /* UIView+Constraint.swift */,
+				2D30EA932B85F91200E16843 /* BottomMenuPresentationController.swift */,
+				2D30EA912B85F46A00E16843 /* QRAlertView.swift */,
 				F1B7A77B2B7A33040067C093 /* ViewController.swift */,
 				F1B7A7802B7A33050067C093 /* Assets.xcassets */,
 				F1B7A7822B7A33050067C093 /* LaunchScreen.storyboard */,
@@ -285,8 +291,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D30EA922B85F46A00E16843 /* QRAlertView.swift in Sources */,
 				F1B7A77C2B7A33040067C093 /* ViewController.swift in Sources */,
 				F1B7A7782B7A33040067C093 /* AppDelegate.swift in Sources */,
+				2D30EA942B85F91200E16843 /* BottomMenuPresentationController.swift in Sources */,
 				F1F050C42B849911004195F4 /* UIView+Constraint.swift in Sources */,
 				F1B7A77A2B7A33040067C093 /* SceneDelegate.swift in Sources */,
 			);

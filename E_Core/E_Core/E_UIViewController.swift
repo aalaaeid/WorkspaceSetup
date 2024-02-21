@@ -12,11 +12,12 @@ public class E_UIViewController: UIViewController {
     public init(message: String, buttonTitle: String,
                 buttonColor: UIColor, buttonHandler: (() -> Void)?) {
      
-        super.init(nibName: nil, bundle: nil)
 
         self.message = message
         self.buttonTitle = buttonTitle
         self.buttonColor = buttonColor
+        
+        super.init(nibName: nil, bundle: nil)
         self.buttonHandler = buttonHandler
     }
     
@@ -24,27 +25,26 @@ public class E_UIViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    var e_Button: UIButton {
+    var e_Button: UIButton = {
         let button = UIButton()
         button.setTitle("Button", for: .normal)
         button.setTitleColor(.black, for: .normal)
         return button
-    }
+    }()
     
-var e_Label: UILabel {
+   var e_Label: UILabel = {
         let label = UILabel()
         label.textAlignment = .center
         label.font = .systemFont(ofSize: 33, weight: .semibold)
         label.textColor = .black
         label.numberOfLines = 0
         label.lineBreakMode = .byWordWrapping
-        label.text = "Label"
         return label
-    }
+    }()
 
-    var message: String?
-    var buttonTitle: String?
-    var buttonColor: UIColor?
+    var message: String
+    var buttonTitle: String
+    var buttonColor: UIColor
     var buttonHandler: (() -> Void)?
     
     public override func viewDidLoad() {
@@ -58,12 +58,14 @@ var e_Label: UILabel {
         stackView.spacing = 20
         view.addSubview(stackView)
         stackView.addArrangedSubviews([e_Label, e_Button])
-        stackView.centerXInSuperview()
+        stackView.anchor(top: nil, leading: view.leadingAnchor,
+                         bottom: nil, trailing: view.trailingAnchor,
+                         padding: .init(top: 0, left: 20, bottom: 0, right: 20))
         stackView.centerYInSuperview()
-        e_Label.constrainHeight(constant: 44)
         
         e_Button.setTitle(buttonTitle, for: .normal)
         e_Button.setTitleColor(buttonColor, for: .normal)
+        e_Button.addTarget(self, action: #selector(e_Action), for: .touchUpInside)
         e_Label.text = message
     }
     
