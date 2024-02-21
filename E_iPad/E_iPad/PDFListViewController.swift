@@ -21,6 +21,8 @@ class PDFListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        view.backgroundColor = .white
+        pdfTableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         pdfTableView.dataSource = self
         pdfTableView.delegate = self
     }
@@ -34,6 +36,11 @@ extension PDFListViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 44
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let pdf = pdfs[indexPath.row]
+        delegate?.didTapPdf(name: pdf)
     }
 
 }
@@ -49,6 +56,7 @@ extension PDFListViewController: UITableViewDataSource {
         cell.textLabel?.text = pdfs[indexPath.row]
         return cell
     }
+    
     
     
 }
