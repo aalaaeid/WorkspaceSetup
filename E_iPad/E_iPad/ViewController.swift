@@ -36,7 +36,6 @@ class ViewController: UIViewController {
              
    
              let splitViewController = UISplitViewController()
-             splitViewController.delegate = self
              splitViewController.preferredDisplayMode = .oneBesideSecondary
              splitViewController.viewControllers = [masterNavigationController, detailNavigationController]
 
@@ -54,23 +53,4 @@ class ViewController: UIViewController {
     }
 
 
-}
-
-//MARK: - PDFListDelegate
-extension ViewController: PDFListDelegate {
-    
-    func didTapPdf(name: String) {
-        let pdfViewerViewController = PDFViewerViewController()
-        pdfViewerViewController.fileName = name
-        self.showDetailViewController(pdfViewerViewController, sender: self)
-    }
-    
-    
-}
-
-extension ViewController: UISplitViewControllerDelegate {
-    
-    override func showDetailViewController(_ vc: UIViewController, sender: Any?) {
-        print("SHOW!!")
-    }
 }

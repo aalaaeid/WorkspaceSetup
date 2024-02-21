@@ -7,15 +7,11 @@
 
 import UIKit
 
-protocol PDFListDelegate: AnyObject {
-    func didTapPdf(name: String)
-}
 
 class PDFListViewController: UIViewController {
 
     @IBOutlet weak var pdfTableView: UITableView!
 
-    weak var delegate: PDFListDelegate?
     var pdfs = ["pdf-test", "dummy", "sample"]
     
     override func viewDidLoad() {
@@ -40,7 +36,17 @@ extension PDFListViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let pdf = pdfs[indexPath.row]
-        delegate?.didTapPdf(name: pdf)
+        let pdfViewerViewController = PDFViewerViewController()
+        pdfViewerViewController.fileName = pdf
+             
+             // Access the navigation controller associated with the detail view controller
+             if let splitViewController = UIApplication.shared.windows.first?.rootViewController as? UISplitViewController {
+                 if let detailNavigationController = splitViewController.viewControllers.last as? UINavigationController {
+                     // Replace the current detail view controller with the PDFViewerViewController
+                     detailNavigationController.setViewControllers([pdfViewerViewController], animated: false)
+                 }
+             
+         }
     }
 
 }
